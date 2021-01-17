@@ -6,38 +6,30 @@ import java.util.Arrays;
 
 public class LockedMe {
 	
-	
-	
-
-	
-
-	public static void DisplayItem()
-	{
-		//String file;
-		//try
-		
-		Scanner scanner = new Scanner( System.in );
-		 System.out.println("Enter the file path:");
-		 String dirPath = scanner.nextLine();
-		 File folder = new File(dirPath);
-		
-		
-			File[] fileList = folder.listFiles();
-			Arrays.sort(fileList);
-			System.out.println("\nTotal number of items present in the directory:" + fileList.length);
+	 public static void SelectOption()
+	 {
+		 System.out.println("1 Display all the File and Directory");
+			System.out.println("2 Create a new file");
+			System.out.println("3 Delete a file");
+			System.out.println("4 Search a file");
+			Scanner scanner = new Scanner( System.in );
+			 System.out.println("Enter the  number");
+			 int select = scanner.nextInt();
+			switch(select)
+			{
+			case 1 :
 				
-			for(File file : fileList)
+				DisplayFile.file();
+				
 			
-		 {
+			break;
 			
-			System.out.println(file.getName());
-		 }
-
-			//catch(Execption e)
-//		{
-//		System.out.println("error");
-//		}
-	
-	}
-
+			case 2:
+				
+				System.out.println("f2nd option");
+				break;
+			 default:
+				 System.out.println(" invalid option ");
+			}
+	 }
 }
