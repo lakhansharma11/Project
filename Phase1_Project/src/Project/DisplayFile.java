@@ -19,8 +19,11 @@ public class DisplayFile {
 			 {
 				File[] fileList = folder.listFiles();
 				Arrays.sort(fileList);
+				int length = fileList.length;
+			if(length >0)
+			{
 				System.out.println("\nTotal number of items present in the directory:" + fileList.length);
-					
+			
 				for(File file : fileList)
 				
 			 {
@@ -32,7 +35,13 @@ public class DisplayFile {
 //		{
 //					System.out.println("error");
 //		}
-			}}else
+			}
+			}else
+			{
+			System.out.println("Empty folder");	
+			}
+			}
+				else
 			{
 				System.out.println("path not exist!");
 			}
