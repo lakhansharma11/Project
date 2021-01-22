@@ -10,8 +10,8 @@ public class Display {
 		System.out.println("On this application, You can create a file, delete a file of search a file form Directory");
 		System.out.println();
 		
-		
-		LockedMe.SelectOption();
+		LockedMe op = new LockedMe();
+		op.SelectOption();
 		
 	}
 
