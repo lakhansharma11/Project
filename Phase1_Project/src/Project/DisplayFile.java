@@ -9,7 +9,7 @@ public class DisplayFile {
 	public static void file()
 	{
 			Scanner scanner = new Scanner( System.in );
-			 System.out.println("Enter the file path:");
+			 System.out.println("\n Please Enter The Directory Path:");
 			 String dirPath = scanner.nextLine();
 			 File folder = new File(dirPath);
 			
@@ -37,7 +37,7 @@ public class DisplayFile {
 			{
 				System.out.println("path not exist!");
 			}
-		
+			 
 		}
 
 }

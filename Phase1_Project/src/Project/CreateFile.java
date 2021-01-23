@@ -16,35 +16,26 @@ public class CreateFile {
 		if (folder.isDirectory()) {
 			{
 				Scanner scanner1 = new Scanner(System.in);
-				System.out.println("Enter the file file name");
+				System.out.println("/n Enter the file file name");
 			String file1 = scanner1.nextLine();
-				File file = new File(folder,file1);
-//						,StandardOpenOption.CREATE_NEW);
-				//FileWriter fileWriter = null;
+				File file = new File(folder,file1); 
+
 				try {
 					if (file.createNewFile())
-						System.out.println("File created!");
+						System.out.println("/n File created!");
 					else
-						System.out.println("File already exists!");
-//					fileWriter = new FileWriter(file);
-//					fileWriter.write("Test data 1 !");
+						System.out.println("/n File already exists!");
+
 				} catch (IOException e) {
 					
-					System.out.println("Incorrect file path!");
+					System.out.println("/n Incorrect file path!");
 					e.printStackTrace();
 				} 
-				//					finally {
-//					try {
-//						fileWriter.close();
-//					} catch (IOException e) {
-//						
-//						e.printStackTrace();
-//					}
-//				}
+			
 
 			}
 		} else {
-			System.out.println("path not exist!");
+			System.out.println("/n path not exist!");
 		}
 	}
 }

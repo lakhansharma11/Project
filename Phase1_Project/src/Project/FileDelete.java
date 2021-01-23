@@ -1,5 +1,6 @@
 package Project;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryNotEmptyException;
 import java.nio.file.Files;
@@ -11,15 +12,21 @@ import java.util.Scanner;
 public class FileDelete {
 
 	public static void dfile() {
-		DisplayFile fd = new DisplayFile();
-	fd.file();
-		Scanner sc = new Scanner(System.in);
-  		 System.out.println("Enter the file name to search:");
-  		 Path filename = Paths.get(sc.next());
+		Scanner scanner = new Scanner( System.in );
+		 System.out.println("\n Please Enter The Directory Path:");
+		 String dirPath = scanner.nextLine();
+		 File folder = new File(dirPath);
+		 if(folder.isDirectory())
+		 {
+		 Scanner scanner1 = new Scanner(System.in);
+			System.out.println("/n Enter the file file name");
+		String file1 = scanner1.nextLine();
+		String combined_path = new File(folder, file1).getPath();
+		Path path = Paths.get(combined_path);
         try
         { 
         	
-            Files.deleteIfExists(filename); 
+            Files.delete(path); 
             System.out.println("Deletion successful.");
         } 
         catch(NoSuchFileException e) 
@@ -36,7 +43,13 @@ public class FileDelete {
         } 
           
          
-    } 
+    } else
+    {
+    	System.out.println("path not exist!");
+    }
+    }
+
+	
  
 }
 

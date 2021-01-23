@@ -15,16 +15,17 @@ public class LockedMe {
 				System.out.println("");
 				System.out.println("");
 				System.out.println("========================================================================");
-				System.out.println("1 Display all the File and Directory");
-				System.out.println("2 Create a new file");
-				System.out.println("3 Delete a file");
-				System.out.println("4 Search a file");
-				System.out.println("5 Exit");
+				System.out.println("\n 1--Display all the File and Directory");
+				System.out.println("\n 2--Create a new file");
+				System.out.println("\n 3--Delete a file");
+				System.out.println("\n 4--Search a file");
+				System.out.println("\n 5--Exit");
 				Scanner scanner = new Scanner(System.in);
-				System.out.println("Enter the  number");
+				System.out.println("\n Enter the  number\n");
 				int select = scanner.nextInt();
 				switch (select) {
 				case 1:
+					System.out.println("\n You have selected option 1: Display all the File and Directory.....");
 					DisplayFile fd = new DisplayFile();
 					fd.file();
 
@@ -46,14 +47,17 @@ public class LockedMe {
 
 					break;
 				case 5:
+					System.out.println("\n Closing your application........ \n Thank you!");
 					System.exit(0);
 				default:
-					System.out.println(" invalid option ");
+					System.out.println("\n invalid option ");
 				}
+				
 			
 		} catch (InputMismatchException ex) {
-			System.out.println("Invalid input! ");
+			System.out.println("\n Invalid input! ");
 		}
+		
 	}
 	}
 
