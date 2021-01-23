@@ -31,8 +31,9 @@ public class LockedMe {
 			break;
 			
 		case 3:
-			FileSearch fs = new FileSearch();
-			fs.Search();
+			FileSearch call = new FileSearch();
+			call.Search();
+			
 			break;
 			
 		default:
@@ -44,6 +45,11 @@ public class LockedMe {
 			System.out.println("Invalid input! You have to enter a number ");
 		}
 }
+
+	private static int FileSearch(File folder, File input) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 //	private static void CreateFile() {
 //		// TODO Auto-generated method stub
