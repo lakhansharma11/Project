@@ -15,6 +15,8 @@ public class FileSearch {
 		 File folder = new File(dirPath);
         String[] flist = folder.list(); 
         int flag = 0; 
+        if(folder.isDirectory())
+        {
         if (flist == null) { 
             System.out.println("Empty directory."); 
         } 
@@ -39,5 +41,9 @@ public class FileSearch {
         
         }
 		
-    } 
+    } else
+    {
+    	System.out.println("path not exist!");
+    }
+    }
 }
