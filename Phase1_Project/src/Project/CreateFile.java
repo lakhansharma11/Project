@@ -14,7 +14,7 @@ public class CreateFile {
 		if (folder.isDirectory()) {
 			{
 				Scanner scanner1 = new Scanner(System.in);
-				System.out.println("\n Enter the file file name\n");
+				System.out.println("\n Enter the file name\n");
 			String file1 = scanner1.nextLine();
 				File file = new File(folder,file1); 
 
@@ -29,11 +29,12 @@ public class CreateFile {
 					System.out.println("\n Incorrect file path!\n");
 					e.printStackTrace();
 				} 
-			
+				
 
 			}
 		} else {
 			System.out.println("/n path not exist!");
 		}
+		
 	}
 }

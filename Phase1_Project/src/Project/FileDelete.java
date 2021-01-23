@@ -43,7 +43,7 @@ public class FileDelete {
             System.out.println("\nInvalid permissions.\n"); 
         } 
           
-         
+       
     
 		 }else
 			{
@@ -54,6 +54,7 @@ public class FileDelete {
     {
     	System.out.println("\npath not exist!\n");
     }
+		 
     }
 
 	
