@@ -11,12 +11,13 @@ public class LockedMe {
 
 				System.out.println("");
 				System.out.println("\n========================================================================");
-				System.out.println("\n Select 1-- Display all the File and Directory");
+				System.out.println("\n*****Please Enter Your Choice****\n");
+				System.out.println("\n Select 1-- Display all the File and Folders");
 				System.out.println("\n Select 2-- To create a file, delete a file and search a file form Directory");
 
 				System.out.println("\n 3--Exit");
 				Scanner scanner = new Scanner(System.in);
-				System.out.println("\n Enter your choice:\t");
+				System.out.println("\n Enter your choice:\n");
 				int select = scanner.nextInt();
 				switch (select) {
 				case 1:
@@ -27,7 +28,7 @@ public class LockedMe {
 					break;
 
 				case 2:
-					System.out.println("\n Ye have selected 2nd option, Below are the sub menu");
+					System.out.println("\n you have selected 2nd option, Below are the sub menu");
 					LockedMe.SelectSubOption();
 					break;
 
@@ -35,13 +36,13 @@ public class LockedMe {
 					System.out.println("\n Closing your application........ \n Thank you!");
 					System.exit(0);
 				default:
-					System.out.println("\n invalid option ");
+					System.out.println("\n invalid option! Please select option Between 1 to 3");
 					LockedMe.SelectOption();
 					break;
 				}
 
 			} catch (InputMismatchException ex) {
-				System.out.println("\n Invalid input! ");
+				System.out.println("\n Invalid input type! Please try again");
 				LockedMe.SelectOption();
 			}
 
@@ -52,7 +53,7 @@ public class LockedMe {
 		try {
 			System.out.println("\n========================================================================\n");
 			
-			System.out.println("\n Sub Menu");
+			System.out.println("\n *******Sub Menu******\n");
 			System.out.println("\n 1--Create a new file");
 			System.out.println("\n 2--Delete a file");
 			System.out.println("\n 3--Search a file");
@@ -64,39 +65,35 @@ public class LockedMe {
 			switch (input) {
 
 			case 1:
-				CreateFile fc = new CreateFile();
-				fc.Cfile();
+				CreateFile.Cfile();
 				LoopBack.navigate();
 				break;
 
 			case 2:
-				FileDelete fde = new FileDelete();
-				fde.dfile();
+				FileDelete.dfile();
 				LoopBack.navigate();
 				break;
 
 			case 3:
-				FileSearch call = new FileSearch();
-				call.Search();
+				FileSearch.Search();
 				LoopBack.navigate();
 
 				break;
 			case 4:
-				LockedMe a = new LockedMe();
-				a.SelectOption();
+				LockedMe.SelectOption();
 
 				break;
 			case 5:
 				System.out.println("\n Closing your application........ \n Thank you!");
 				System.exit(0);
 			default:
-				System.out.println("\n invalid option ");
+				System.out.println("\n invalid option! Please select option Between 1 to 3 ");
 				LockedMe.SelectSubOption();
 				break;
 			}
 
 		} catch (InputMismatchException ex) {
-			System.out.println("\n Invalid input! ");
+			System.out.println("\n Invalid input type! Please try again");
 			LockedMe.SelectSubOption();
 
 		}

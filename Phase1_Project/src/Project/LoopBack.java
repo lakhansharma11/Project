@@ -10,7 +10,7 @@ public class LoopBack {
 		System.out.println("\n========================================================================\n");
 		System.out.println("\n ");
 		System.out.println("\n 1--Back to Sub Menu");
-		System.out.println("\n 2--back to Main Menu");
+		System.out.println("\n 2--Back to Main Menu");
 		System.out.println("\n 3--Close the Application");
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("\n Enter your choice:\t");
@@ -18,14 +18,12 @@ public class LoopBack {
 		switch (input) {
 		
 		case 1:
-			LockedMe b = new LockedMe();
-			b.SelectSubOption();
+			LockedMe.SelectSubOption();
 			
 			break;
 			
 		case 2:
-			LockedMe a = new LockedMe();
-			a.SelectOption();
+			LockedMe.SelectOption();
 			
 			break;
 
@@ -34,16 +32,14 @@ public class LoopBack {
 			System.out.println("\n Closing your application........ \n Thank you!");
 			System.exit(0);
 		default:
-			System.out.println("\n invalid option ");
-			LockedMe b1 = new LockedMe();
-			b1.SelectSubOption();
+			System.out.println("\n invalid option! Please select option Between 1 to 3");
+			LoopBack.navigate();
 			break;
 	}
 	
 	}catch (InputMismatchException ex) {
-		System.out.println("\n Invalid input! ");
-		LockedMe b = new LockedMe();
-		b.SelectSubOption();
+		System.out.println("\n Invalid input type! Please try again");
+		LoopBack.navigate();
 		
 }
 	}
